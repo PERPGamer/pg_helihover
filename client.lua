@@ -9,8 +9,8 @@ RegisterCommand('hover', function()
 			Citizen.CreateThread(function()
 				HelpMessage('Auto Hover has been ~g~Engaged', false, true, 8000)
 				while GetVehiclePedIsIn(ped,true) == vehicle and PERPGamer_HoverOn and GetHeliMainRotorHealth(vehicle) > 0 and GetHeliTailRotorHealth(vehicle) > 0 and GetVehicleEngineHealth(vehicle) > 300 do Citizen.Wait(0)
-				local currentvelocity = GetEntityVelocity(vehicle)
-				SetEntityVelocity(vehicle, currentvelocity.x, currentvelocity.y, 0.0)
+					local currentvelocity = GetEntityVelocity(vehicle)
+					SetEntityVelocity(vehicle, currentvelocity.x, currentvelocity.y, 0.0)
 				end
 				HelpMessage('Auto Hover has been ~r~Disengaged', false, true, 8000)
 				PERPGamer_HoverOn = false
